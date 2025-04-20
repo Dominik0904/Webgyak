@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <title>Táblázat CRUD funkcióval</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Web-programozás-1 Előadás Házi feladat</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Főoldal</a></li>
+      <li class="active"><a href="tabla.html">Táblázat</a></li>
+      <li><a href="html5.html">HTML5</a></li>
+      <li><a href="chart.html">ChartJS</a></li>
+      <li><a href="ajax.html">AJAX</a></li>
+      <li><a href="oojs.html">OOJS</a></li>
+    </ul>
+  </nav>
+
+  <aside>
+    <p>CRUD funkció: Create, Read, Update, Delete</p>
+  </aside>
+
+  <div id="content">
+    <h2>Felhasználói adatok kezelése</h2>
+
+    <div>
+      <input type="text" id="name" placeholder="Név">
+      <input type="number" id="age" placeholder="Életkor" min="1" max="120">
+      <input type="text" id="city" placeholder="Város">
+      <input type="email" id="email" placeholder="Email">
+      <button onclick="addRecord()">Hozzáadás</button>
+    </div>
+
+    <div>
+      <input type="text" id="searchInput" onkeyup="filterTable()" placeholder="Keresés...">
+    </div>
+
+    <table id="userTable" border="1">
+      <thead>
+        <tr>
+          <th onclick="sortTable(0)">Név</th>
+          <th onclick="sortTable(1)">Életkor</th>
+          <th onclick="sortTable(2)">Város</th>
+          <th onclick="sortTable(3)">Email</th>
+          <th>Művelet</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Dinamikusan töltjük -->
+      </tbody>
+    </table>
+  </div>
+
+  <footer>
+    <p>Készítette: Wéber Dominik (FL6KPT)</p>
+  </footer>
+
+  <script src="tabla.js"></script>
+</body>
+</html>
